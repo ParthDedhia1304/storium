@@ -1,11 +1,46 @@
-// middleware.ts
 import { NextResponse, type NextRequest } from "next/server";
+import axios from "axios";
+import { Session } from "./lib/better-auth/auth-types";
+import { APP_URL } from "./lib/env";
 
-export function middleware(req: NextRequest) {
-  const { pathname } = req.nextUrl;
+async function getMiddlewareSession(req: NextRequest) {
+  console.log(req.nextUrl.origin);
+  const { data: session } = await axios.get<Session>("/api/auth/get-session", {
+   // baseURL: req.nextUrl.origin,
+    baseURL: APP_URL,
+    headers: {
+      //get the cookie from the request
+      cookie: req.headers.get("cookie") || "",
+    },
+  });
+  
 
-  if (pathname === "/") {
-    return NextResponse.redirect(new URL("/dashboard", req.url));
+  return session;
+}
+
+export default async function authMiddleware(req: NextRequest) {
+  const session = await getMiddlewareSession(req);
+  const pathname = req.nextUrl.pathname
+  const url = req.url
+
+  if(pathname === "/"){
+    return NextResponse.redirect(new URL("/dashboard", url))
+  }
+
+  if(pathname.startsWith("/dashboard")){
+    if(session){
+      return NextResponse.next()
+    }
+
+    return NextResponse.redirect(new URL("/sign-in", url))
+  }
+
+  if(pathname.startsWith("/sign-")){
+    if(!session){
+      return NextResponse.next()
+    }
+
+    return NextResponse.redirect(new URL("/dashboard", url))
   }
 
   return NextResponse.next();
@@ -13,6 +48,9 @@ export function middleware(req: NextRequest) {
 
 export const config = {
   matcher: [
-    "/((?!_next|.*\\..*).*)", // Matches all routes except static assets
+    // Skip Next.js internals and all static files, unless found in search params
+    "/((?!_next|[^?]*\\.(?:html?|css|js(?!on)|jpe?g|webp|png|gif|svg|ttf|woff2?|ico|csv|docx?|xlsx?|zip|webmanifest)).*)",
+    // Always run for API routes
+    "/(api|trpc)(.*)",
   ],
 };
