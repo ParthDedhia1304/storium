@@ -39,7 +39,7 @@ API keys for Google Cloud, Pinata, and Paddle
 
 2. Installation
 # Clone the repository
-git clone https://github.com/dudhwala13/storium.git
+git clone https://github.com/ParthDedhia1304/storium.git
 cd storium
 
 # Install dependencies
