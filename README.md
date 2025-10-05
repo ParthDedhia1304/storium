@@ -1,36 +1,92 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+🚀 Storium — Secure File Storage & Sharing
 
-## Getting Started
+A modern, secure, and decentralized file storage platform built with the MERN stack, empowering users to upload, manage, and share digital assets with granular control and IPFS-based decentralized storage.
 
-First, run the development server:
+✨ Features
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+✅ Secure Authentication — Login seamlessly via Google OAuth using Better Auth.
+✅ Decentralized Storage — Files are uploaded to IPFS via Pinata, ensuring data integrity and privacy.
+✅ File Management — Upload, rename, download, and delete files intuitively.
+✅ Granular Sharing — Share files with custom permissions: read, update, delete.
+✅ Subscription Management — Integrated with Paddle for premium storage tiers.
+✅ Infinite Scrolling — Smooth and optimized browsing experience.
+✅ Modern UI/UX — Built with Tailwind CSS + Shadcn UI, featuring responsive design and dark mode.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+🛠️ Tech Stack
+Category	Technologies
+Frontend	Next.js, React, TypeScript, Tailwind CSS, Shadcn UI, React Query
+Backend	Node.js, Hono
+Database	MongoDB, Mongoose
+Auth	Better Auth (Google OAuth)
+Payments	Paddle
+Storage	Pinata, IPFS
+⚙️ Getting Started
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Follow the steps below to run Storium locally:
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+1. Prerequisites
 
-## Learn More
+Ensure you have:
 
-To learn more about Next.js, take a look at the following resources:
+Node.js v18 or later
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Bun (or npm/yarn)
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+MongoDB instance (e.g., MongoDB Atlas
+)
 
-## Deploy on Vercel
+API keys for Google Cloud, Pinata, and Paddle
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+2. Installation
+# Clone the repository
+git clone https://github.com/dudhwala13/storium.git
+cd storium
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+# Install dependencies
+bun install
+
+3. Environment Setup
+
+Create a .env file in the project root and add:
+
+# Authentication
+BETTER_AUTH_SECRET="your_strong_secret_for_better_auth"
+BETTER_AUTH_URL="http://localhost:3000"
+GOOGLE_CLIENT_ID="your_google_client_id"
+GOOGLE_CLIENT_SECRET="your_google_client_secret"
+NEXT_PUBLIC_APP_URL="http://localhost:3000"
+
+# Database
+MONGODB_URI="your_mongodb_connection_string"
+
+# File Storage (Pinata)
+PINATA_JWT="your_pinata_jwt"
+NEXT_PUBLIC_GATEWAY_URL="your_pinata_gateway_url"
+
+# Payments (Paddle)
+NEXT_PUBLIC_PADDLE_CLIENT_TOKEN="your_paddle_client_token"
+PADDLE_API_KEY="your_paddle_api_key"
+PADDLE_PRODUCT_ID="your_paddle_product_id"
+PADDLE_SUBSCRIPTION_WEBHOOK_SECRET_KEY="your_paddle_webhook_secret"
+
+4. Run the Development Server
+bun run dev
+
+
+Then open 👉 http://localhost:3000
+
+🧠 Future Improvements
+
+🔒 End-to-End Encryption — Client-side encryption for maximum data security.
+
+👥 Team Collaboration — Shared workspaces and group access controls.
+
+📂 Advanced File Previews — Inline previews for media and document types.
+
+🔍 Smart Search — Full-text and tag-based search features.
+
+🧾 License
+
+This project is licensed under the MIT License.
+See the LICENSE
+ file for more details.
