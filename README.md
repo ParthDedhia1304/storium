@@ -1,53 +1,103 @@
-🚀 Storium — Secure File Storage & Sharing
+🚀 Storium — Secure File Storage & Sharing Platform
 
-A modern, secure, and decentralized file storage platform built with the MERN stack, empowering users to upload, manage, and share digital assets with granular control and IPFS-based decentralized storage.
 
-✨ Features
 
-✅ Secure Authentication — Login seamlessly via Google OAuth using Better Auth.
-✅ Decentralized Storage — Files are uploaded to IPFS via Pinata, ensuring data integrity and privacy.
-✅ File Management — Upload, rename, download, and delete files intuitively.
-✅ Granular Sharing — Share files with custom permissions: read, update, delete.
-✅ Subscription Management — Integrated with Paddle for premium storage tiers.
-✅ Infinite Scrolling — Smooth and optimized browsing experience.
-✅ Modern UI/UX — Built with Tailwind CSS + Shadcn UI, featuring responsive design and dark mode.
 
-🛠️ Tech Stack
+
+
+
+
+
+
+
+
+
+
+A modern decentralized file storage and sharing application that ensures data security, scalability, and user-friendly management.
+Storium integrates IPFS via Pinata, secure Google OAuth login, and subscription-based storage tiers — built using the MERN + Next.js stack.
+
+Live Demo: https://storium.vercel.app/
+
+Demo Video: View on Google Drive
+
+🌟 Features
+
+Storium combines security, simplicity, and decentralization in one seamless platform:
+
+🔐 Secure Authentication – Login effortlessly using Google OAuth with Better Auth.
+
+🌐 Decentralized Storage – Upload and retrieve files through IPFS using Pinata, ensuring data immutability and privacy.
+
+📁 File Management Suite – Upload, rename, delete, and download files with a modern, minimal interface.
+
+🤝 Granular File Sharing – Share your files securely with custom permissions (read/update/delete).
+
+💳 Subscription System – Integrated Paddle Payments for managing premium plans and extended storage capacity.
+
+🧭 Infinite Scrolling – Smooth browsing experience for large file lists using lazy loading.
+
+🎨 Modern UI/UX – Built with Tailwind CSS, Shadcn UI, and responsive dark mode for a polished user experience.
+
+🛠️ Technology Stack
+
+This project leverages a modern full-stack architecture to provide scalability and performance:
+
 Category	Technologies
-Frontend	Next.js, React, TypeScript, Tailwind CSS, Shadcn UI, React Query
+Frontend	Next.js 14, React 18, TypeScript, Tailwind CSS, Shadcn UI, React Query
 Backend	Node.js, Hono
-Database	MongoDB, Mongoose
-Auth	Better Auth (Google OAuth)
+Database	MongoDB (Mongoose ORM)
+Authentication	Better Auth (Google OAuth)
+Storage	IPFS (via Pinata)
 Payments	Paddle
-Storage	Pinata, IPFS
-⚙️ Getting Started
+Deployment	Vercel
+⚙️ System Workflow
 
-Follow the steps below to run Storium locally:
+The Storium platform follows a robust and modular workflow:
 
-1. Prerequisites
+User Authentication – Secure sign-in through Google OAuth.
 
-Ensure you have:
+File Upload – Files are pinned and stored in IPFS via Pinata.
 
-Node.js v18 or later
+Metadata Storage – File metadata (owner, permissions, IPFS hash, size) is saved in MongoDB Atlas.
 
-Bun (or npm/yarn)
+File Access & Sharing – Authorized users can access, rename, or delete files using the UI.
 
-MongoDB instance (e.g., MongoDB Atlas
-)
+Subscription Management – Users can upgrade their storage plans via Paddle’s API.
 
-API keys for Google Cloud, Pinata, and Paddle
+Data Retrieval – Files are served via Pinata Gateway for fast and reliable access.
 
-2. Installation
-# Clone the repository
-git clone https://github.com/ParthDedhia1304/storium.git
+🚀 Getting Started
+
+Follow these steps to run Storium locally on your system.
+
+Prerequisites
+
+Node.js (v18 or higher)
+
+Bun, npm, or yarn
+
+MongoDB Atlas account
+
+Google Cloud credentials (OAuth Client)
+
+Pinata account (for IPFS)
+
+Paddle account (for payment integration)
+
+Installation & Setup
+
+Clone the repository:
+
+git clone https://github.com/dudhwala13/storium.git
 cd storium
 
-# Install dependencies
+
+Install dependencies:
+
 bun install
 
-3. Environment Setup
 
-Create a .env file in the project root and add:
+Create a .env file in the root directory with the following variables:
 
 # Authentication
 BETTER_AUTH_SECRET="your_strong_secret_for_better_auth"
@@ -69,24 +119,40 @@ PADDLE_API_KEY="your_paddle_api_key"
 PADDLE_PRODUCT_ID="your_paddle_product_id"
 PADDLE_SUBSCRIPTION_WEBHOOK_SECRET_KEY="your_paddle_webhook_secret"
 
-4. Run the Development Server
+
+Run the development server:
+
 bun run dev
 
 
-Then open 👉 http://localhost:3000
+Access the app:
+Open your browser and visit 👉 http://localhost:3000
 
-🧠 Future Improvements
+💡 Future Enhancements
 
-🔒 End-to-End Encryption — Client-side encryption for maximum data security.
+🔒 End-to-End Encryption – Implement client-side encryption for zero-knowledge file security.
 
-👥 Team Collaboration — Shared workspaces and group access controls.
+👥 Team Collaboration – Enable shared team drives and collaborative workspaces.
 
-📂 Advanced File Previews — Inline previews for media and document types.
+📂 File Previews – Support document, image, and video previews directly in the browser.
 
-🔍 Smart Search — Full-text and tag-based search features.
+🔍 Intelligent Search – Integrate semantic search to locate files by name or content.
 
-🧾 License
+📱 Mobile Optimization – Enhance responsiveness for mobile-first access.
 
-This project is licensed under the MIT License.
-See the LICENSE
- file for more details.
+📬 Contact
+
+For questions, feedback, or collaboration opportunities, feel free to reach out:
+
+Author: Parth Dudhwala
+📧 Email: parthdudhwala13@gmail.com
+🌐 GitHub: https://github.com/dudhwala13
+
+💼 LinkedIn: https://linkedin.com/in/parthdudhwala
+
+🧠 LeetCode: https://leetcode.com/dhudhwala13
+
+📄 License
+
+This project is licensed under the MIT License — see the LICENSE
+ file for details.
