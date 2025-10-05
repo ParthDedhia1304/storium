@@ -16,9 +16,6 @@
 A modern decentralized file storage and sharing application that ensures data security, scalability, and user-friendly management.
 Storium integrates IPFS via Pinata, secure Google OAuth login, and subscription-based storage tiers — built using the MERN + Next.js stack.
 
-Live Demo: https://storium.vercel.app/
-
-Demo Video: View on Google Drive
 
 🌟 Features
 
@@ -144,15 +141,7 @@ Open your browser and visit 👉 http://localhost:3000
 
 For questions, feedback, or collaboration opportunities, feel free to reach out:
 
-Author: Parth Dudhwala
-📧 Email: parthdudhwala13@gmail.com
-🌐 GitHub: https://github.com/dudhwala13
-
-💼 LinkedIn: https://linkedin.com/in/parthdudhwala
-
-🧠 LeetCode: https://leetcode.com/dhudhwala13
-
-📄 License
+Author: Parth Dedhia
 
 This project is licensed under the MIT License — see the LICENSE
  file for details.
