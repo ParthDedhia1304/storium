@@ -85,7 +85,7 @@ Installation & Setup
 
 Clone the repository:
 
-git clone https://github.com/dudhwala13/storium.git
+git clone https://github.com/ParthDedhia1304/storium.git
 cd storium
 
 
